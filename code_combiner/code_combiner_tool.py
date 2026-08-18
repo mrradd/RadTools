@@ -12,6 +12,7 @@ Supported file types:
 - .sqm  SQLDelight migration files, or other .sqm files
 - .js   Javascript files.
 - .jsx  React Javascript files.
+- .ts   Typescript files.
 - .tsx  React Typescript files.
 - .html HTML files.
 - .css  CSS files.
