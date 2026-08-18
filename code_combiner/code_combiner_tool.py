@@ -25,7 +25,7 @@ from pathlib import Path
 import argparse
 
 # File extensions this script should collect.
-SUPPORTED_EXTENSIONS = {".kt", ".sq", ".sqm", ".js", ".jsx", ".tsx", ".html", ".css"}
+SUPPORTED_EXTENSIONS = {".kt", ".sq", ".sqm", ".js", ".jsx", ".ts", ".tsx", ".html", ".css"}
 
 def remove_imports(text: str) -> str:
     """
