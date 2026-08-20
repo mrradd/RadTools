@@ -1,5 +1,4 @@
-Combiner Tool README
-# AI Context File Combiner
+# AI Context File Combiner Tool
 
 A simple Python command-line tool that recursively scans a directory, collects supported source files, removes `import` statements, and combines the file contents into one text file for use as AI context.
 
