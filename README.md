@@ -7,13 +7,13 @@ A simple Python command-line tool that recursively scans a directory, collects s
 
 This tool is intended to make it easier to provide project code to an AI assistant by combining multiple source files into a single readable context file.
 
-Each file is separated by a clear header using only the file name.
+Each file is separated by a clear header using the path and file name.
 
 Example output:
 
 ```text
 ----
-HomeScreen.kt
+path/to/code/HomeScreen.kt
 ----
 @Composable
 fun HomeScreen() {
@@ -21,13 +21,13 @@ fun HomeScreen() {
 }
 
 ----
-styles.css
+path/to/code/styles.css
 ----
 .container {
     display: flex;
 }
 ```
-### Supported File Types
+## Supported File Types
 The tool currently collects files with the following extensions:
 
 - .kt
@@ -41,7 +41,7 @@ The tool currently collects files with the following extensions:
 - .css
 
 
-### Features
+## Features
 
 - Recursively scans a directory
 - Combines supported source files into one output file
@@ -51,22 +51,22 @@ The tool currently collects files with the following extensions:
 - Ignores invalid UTF-8 characters instead of crashing
 - Useful for preparing code context for AI tools
 
-### Requirements
+## Requirements
 Python 3.9 or newer recommended
 No third-party Python packages are required.
 
-### Installation
+## Installation
 Clone or download the script into your project or tools directory.
 
-### Usage
-#### Basic usage:
+## Usage
+### Basic usage:
 
 python combine_context.py /path/to/project
 This creates an output file named:
 
-combined_ai_context.txt
+```combined_ai_context.txt```
 
-#### Custom Output File
+### Custom Output File
 You can specify a custom output file with ```-o``` or ```--output```:
 
 ```python combine_context.py /path/to/project -o ai_context.txt```
@@ -91,12 +91,27 @@ Run:
 python combine_context.py project -o context.txt
 ```
 
-### Changing Supported File Types
-To add or remove supported file types, edit this line in the script:
+### Using the ```code_combiner.bat``` Script
+Change ```C:\path\to\code\directory``` in the script to match the path to your desired directory:
+
+```python code_combiner_tool.py C:\path\to\code\directory -o combined_code_%mydate%_%Hour%_%Minute%.txt```
+
+You may also change the name of the output file if desired by changing:
+
+```combined_code_%mydate%_%Hour%_%Minute%.txt```
+
+By default the result is a file named in the following way ```combined_code_yyyy-mm-dd_MM_SS.txt``` where the time is in 24 hour format.
+
+#### Example Output File's Name
+
+```combined_code_2026-08-20_15_32.txt```
+
+## Changing Supported File Types
+To add or remove supported file types, edit this line in the ```code_combiner_tool.py``` script:
 
 ```SUPPORTED_EXTENSIONS = {".kt", ".sq", ".sqm", ".js", ".jsx", ".ts", ".tsx", ".html", ".css"}```
 
-#### For example, to add CSharp files:
+#### For example, to add CSharp file support:
 
 ```
 SUPPORTED_EXTENSIONS = {
@@ -113,5 +128,5 @@ SUPPORTED_EXTENSIONS = {
 }
 ```
 
-#### License
+## License
 Use freely and modify as needed.
