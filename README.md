@@ -91,7 +91,7 @@ Run:
 python combine_context.py project -o context.txt
 ```
 
-### Using the ```code_combiner.bat``` Script
+### Using the ```code_combiner``` Script
 Change ```C:\path\to\code\directory``` in the script to match the path to your desired directory:
 
 ```python code_combiner_tool.py C:\path\to\code\directory -o combined_code_%mydate%_%Hour%_%Minute%.txt```
@@ -100,7 +100,9 @@ You may also change the name of the output file if desired by changing:
 
 ```combined_code_%mydate%_%Hour%_%Minute%.txt```
 
-By default the result is a file named in the following way ```combined_code_yyyy-mm-dd_MM_SS.txt``` where the time is in 24 hour format.
+By default the result is a file named in the following way ```combined_code_yyyy-mm-dd_HH_MM.txt``` where the time is in 24 hour format.
+
+A ```.sh``` version of the script is also provided.
 
 #### Example Output File's Name
 
