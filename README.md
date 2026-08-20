@@ -27,6 +27,7 @@ path/to/code/styles.css
     display: flex;
 }
 ```
+
 ## Supported File Types
 The tool currently collects files with the following extensions:
 
@@ -46,7 +47,7 @@ The tool currently collects files with the following extensions:
 - Recursively scans a directory
 - Combines supported source files into one output file
 - Removes lines that start with import
-- Uses only the file name in separators
+- Uses the path and file name in separators
 - Writes output as UTF-8 text
 - Ignores invalid UTF-8 characters instead of crashing
 - Useful for preparing code context for AI tools
@@ -74,22 +75,6 @@ You can specify a custom output file with ```-o``` or ```--output```:
 or:
 
 ```python combine_context.py /path/to/project --output ai_context.txt```
-
-#### Example
-Given a directory like this:
-
-project/
-├── src/
-│   ├── HomeScreen.kt
-│   ├── Button.jsx
-│   └── styles.css
-└── database/
-    └── queries.sq
-Run:
-
-```
-python combine_context.py project -o context.txt
-```
 
 ### Using the ```code_combiner``` Script
 Change ```C:\path\to\code\directory``` in the script to match the path to your desired directory:
