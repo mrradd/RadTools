@@ -182,4 +182,4 @@ cython_debug/
 
 # Custom
 *.txt
-*.bat
+*_script.bat
