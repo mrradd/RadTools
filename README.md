@@ -61,7 +61,8 @@ Clone or download the script into your project or tools directory.
 ## Usage
 ### Basic usage:
 
-python combine_context.py /path/to/project
+```python combine_context.py /path/to/project```
+
 This creates an output file named:
 
 ```combined_ai_context.txt```
