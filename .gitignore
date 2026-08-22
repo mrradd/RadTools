@@ -183,3 +183,5 @@ cython_debug/
 # Custom
 *.txt
 *_script.bat
+*_script.sh
+*.code-workspace
